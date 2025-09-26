@@ -402,3 +402,88 @@ nav a:hover{
 
 
 }
+
+@media screen and (max-width: 1000px) {
+    .Arrows {
+        display: flex;
+        justify-content: center;
+        bottom: 20px;
+        top: auto;
+    }
+
+    .Thumbnail {
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Content {
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-right: 10%;
+        text-align: center;
+    }
+}
+
+/* 425px tak sirf navigation chup jaye, buttons same rahen */
+@media screen and (max-width: 425px) {
+    nav {
+        display: none; /* navigation chupa diya jayega */
+    }
+
+    header h1 {
+        font-size: 28px;
+        margin-left: 10px;
+    }
+
+    .Arrows {
+        display: flex;
+        justify-content: center;
+        bottom: 15px;
+        top: auto;
+        width: 100%;
+    }
+
+    .Thumbnail {
+        flex-wrap: nowrap;
+        overflow-x: auto; /* choti screen par scroll ke sath */
+        max-width: 90%;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Thumbnail .Items {
+        width: 120px;
+        height: 180px;
+    }
+
+    .Content {
+        width: 90%;
+        max-width: none;
+        padding: 0;
+        top: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .Content h1 {
+        font-size: 22px;
+    }
+
+    .Details p {
+        font-size: 14px;
+    }
+
+    .Vid-Box {
+        width: 200px;
+        height: 110px;
+    }
+
+    .Vid-Box video {
+        width: 200px;
+        height: 110px;
+    }
+}
