@@ -403,78 +403,103 @@ nav a:hover{
 
 }
 
-@media screen and (max-width: 1000px) {
-    .Arrows {
-        display: flex;
+@media screen and (min-width: 1440px) {
+    .Content {
+        max-width: 1200px;
+        font-size: 20px;
+    }
+
+    .Content h1 {
+        font-size: 50px;
+    }
+
+    .Thumbnail .Items {
+        width: 180px;
+        height: 260px;
+    }
+
+    .Vid-Box {
+        width: 300px;
+        height: 180px;
+    }
+}
+
+/* Large Screens (≤1280px) */
+@media screen and (max-width: 1280px) {
+    .Content {
+        max-width: 1000px;
+    }
+
+    .Content h1 {
+        font-size: 40px;
+    }
+
+    .Thumbnail .Items {
+        width: 150px;
+        height: 220px;
+    }
+
+    .Vid-Box {
+        width: 250px;
+        height: 140px;
+    }
+}
+
+/* Laptops (≤1024px) */
+@media screen and (max-width: 1024px) {
+    nav {
+        width: 100%;
         justify-content: center;
-        bottom: 20px;
-        top: auto;
+        gap: 20px;
+    }
+
+    .Content {
+        max-width: 800px;
+        text-align: center;
+        padding-right: 5%;
+    }
+
+    .Content h1 {
+        font-size: 32px;
     }
 
     .Thumbnail {
         bottom: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .Content {
-        top: 15%;
-        left: 50%;
-        transform: translateX(-50%);
-        padding-right: 10%;
-        text-align: center;
-    }
-}
-
-/* 425px tak sirf navigation chup jaye, buttons same rahen */
-@media screen and (max-width: 425px) {
-    nav {
-        display: none; /* navigation chupa diya jayega */
-    }
-
-    header h1 {
-        font-size: 28px;
-        margin-left: 10px;
-    }
-
-    .Arrows {
-        display: flex;
-        justify-content: center;
-        bottom: 15px;
-        top: auto;
-        width: 100%;
-    }
-
-    .Thumbnail {
-        flex-wrap: nowrap;
-        overflow-x: auto; /* choti screen par scroll ke sath */
-        max-width: 90%;
-        bottom: 80px;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .Thumbnail .Items {
         width: 120px;
         height: 180px;
     }
+}
+
+/* Tablets (≤768px) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 0 5px;
+    }
 
     .Content {
-        width: 90%;
-        max-width: none;
-        padding: 0;
-        top: 12%;
-        left: 50%;
-        transform: translateX(-50%);
+        max-width: 600px;
         text-align: center;
     }
 
     .Content h1 {
-        font-size: 22px;
+        font-size: 26px;
     }
 
     .Details p {
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .Thumbnail .Items {
+        width: 100px;
+        height: 150px;
     }
 
     .Vid-Box {
@@ -482,8 +507,82 @@ nav a:hover{
         height: 110px;
     }
 
-    .Vid-Box video {
-        width: 200px;
-        height: 110px;
+    .Arrows {
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+    }
+}
+
+/* Mobiles (≤425px) */
+@media screen and (max-width: 425px) {
+    nav {
+        display: none; /* hide nav in mobile */
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .Buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .Content {
+        width: 95%;
+        max-width: none;
+        text-align: center;
+        padding: 0;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Content h1 {
+        font-size: 20px;
+    }
+
+    .Details p {
+        font-size: 12px;
+    }
+
+    .Thumbnail {
+        bottom: 80px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+        max-width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Thumbnail .Items {
+        width: 90px;
+        height: 120px;
+    }
+
+    .Vid-Box {
+        width: 150px;
+        height: 90px;
+    }
+
+    .Arrows {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        bottom: 15px;
+        top: auto;
+        position: fixed;
     }
 }
